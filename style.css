@@ -10,3 +10,12 @@
     height: 88vh;
     background-color: rgb(112, 120, 237);
 }
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+
