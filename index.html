@@ -8,7 +8,7 @@
     <title>Cineclub</title>
 </head>
 <body>
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+    <header id="header" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
         <div class="col-md-3 mb-2 mb-md-0">
           <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
             <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
@@ -30,7 +30,19 @@
         <!-- Contenedor página inicio sin bootstrap-->
     </div>
     <div id="cartelera">
-        <!-- Contenedor página cartelera sin bootstrap-->
+        <div id="cartelera-container">
+          <div id="poster-container">
+
+          </div>
+          <div id="movie-info-container">
+            <h3>Título de la película</h3>
+            <h5>Nombre del Director</h5>
+            <h5>Año</h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo impedit molestiae voluptas, alias numquam, eaque, incidunt ipsam voluptate ipsum tempore id. Deserunt rerum commodi pariatur beatae maxime adipisci, quibusdam non.</p>
+            <p>Horario: 20/10/2024, 18:00hrs</p>
+            <button id="reservarButton" type="button" class="btn btn-primary me-2">Reservar</button>
+          </div>
+        </div>
     </div>
     <div id="project">
         <!-- Contenedor página sobre el proyecto con bootstrap -->
