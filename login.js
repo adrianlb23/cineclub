@@ -33,8 +33,44 @@ function verificarNombre() {
     return true;
 }
 
+function verificarContraseña() {
+    let password = document.getElementById('password').value;
+    let errorElement = document.getElementById('password-error');
+
+    // Limpia cualquier mensaje de error previo
+    errorElement.textContent = '';
+
+    if (password.length > 20 ||  password.length < 6) {
+        errorElement.textContent = "La contraseña debe tener entre 6 a 20 carácteres";
+        return false;
+    }
+    return true;
+    
+}
+
+function verificarRut() {
+    let rut = document.getElementById('rut').value;
+    let errorElement = document.getElementById('rut-error');
+
+    // Limpia cualquier mensaje de error previo
+    errorElement.textContent = '';
+
+    if (rut.length != 9) {
+        errorElement.textContent = "Rut incorrecto, ingrese rut sin puntos ni guión";
+        return false;
+    }
+    return true;
+    
+}
+
 function validarUsuario(){
-    if (verificarNombre()){
+    if (verificarNombre() && verificarContraseña() && verificarRut()) {
         alert("Usuario creado correctamente");
+        
+        // Borrar campos luego de usuario validado
+        document.getElementById('nombre').value = '';
+        document.getElementById('password').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('rut').value = '';
     }
 }
