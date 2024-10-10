@@ -1,3 +1,6 @@
+import {moverFondo, cargarPosters} from './index.js'
+
+
 // objetos de la pagina login
 const container = document.getElementById('container');
 const btnregistro = document.getElementById('register');
