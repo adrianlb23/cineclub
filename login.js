@@ -66,6 +66,7 @@ function verificarRut() {
 function validarUsuario(){
     if (verificarNombre() && verificarContraseña() && verificarRut()) {
         alert("Usuario creado correctamente");
+        window.location.href = "index.html";
         
         // Borrar campos luego de usuario validado
         document.getElementById('nombre').value = '';

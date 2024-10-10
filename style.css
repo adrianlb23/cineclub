@@ -3,6 +3,13 @@
     background-color: brown;
 }
 
+img{
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
 #header{
     background-color: #14181C;
 }
@@ -13,6 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 #project{
     height: 88vh;
@@ -28,14 +36,60 @@
     display: flex;
     padding: 20px;
     gap: 10px;
+    z-index: 1;
 }
 
-#poster-container{
-    background-color: #1C222A;
-    width: calc(50% - 5px);
+#poster-container {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; /* Solo se mostrará una imagen a la vez */
+    width: 50%;
+}
+
+#poster-slider {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    width: 100%;
+    position: relative;
+}
+
+.slider-item {
+    position: absolute;
+    display: none; /* Oculta todas las imágenes por defecto */
+    width: 57.5%;
+    height: auto;
+    transition: opacity 0.5s ease;
+}
+
+.slider-item.active {
+    display: block; /* Solo la imagen activa será visible */
+    opacity: 1;
+    z-index: 1;
+}
+
+#prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#prevButton {
+    left: 0;
+}
+
+#nextButton {
+    right: 0;
 }
 
 #movie-info-container{
