@@ -121,4 +121,22 @@ header {
     color: red;
 }
 
+/*Contenedor de proyecto*/
+#left-container-project{
+    background-color: #2b333e;
+    padding: 20px;
+}
 
+#right-container-project{
+    background-color: #424c5b;
+    color: azure;
+    padding: 50px;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center; /* Centra verticalmente si lo deseas */
+    gap: 10px;
+}
+
+#right-container-project p {
+    text-align: justify;
+}
